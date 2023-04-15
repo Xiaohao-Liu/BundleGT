@@ -1,0 +1,26 @@
+Youshu:
+  data_path: './datasets'
+  batch_size_train: 2048 # the batch size for training
+  batch_size_test: 2048 # the batch size for testing
+  topk: [10, 20, 40, 80] # the topks metrics for evaluation
+  neg_num: 1 # number of negatives used for BPR loss. All the experiments use 1.
+  test_interval: 10 # by how many epochs to run the validation and testing.
+
+NetEase:
+  data_path: './datasets'
+  batch_size_train: 2048
+  batch_size_test: 2048
+  topk: [10, 20, 40, 80]
+  neg_num: 1
+  test_interval: 5
+
+iFashion:
+  data_path: './datasets'
+  batch_size_train: 2048
+  batch_size_test: 2048
+  topk: [10, 20, 40, 80]
+  neg_num: 1
+  test_interval: 2
+
+BundleGT:
+  embedding_size: 64
