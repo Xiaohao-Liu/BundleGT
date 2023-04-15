@@ -9,9 +9,9 @@ from .LGCN import LGCN
 eps = 1e-9
 
 
-class LiGT(nn.Module):
+class HGT(nn.Module):
     def __init__(self, conf, data):
-        super().__init__()
+        super(HGT).__init__()
         self.conf = {
             # basic
             "n_user": None,
