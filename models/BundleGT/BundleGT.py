@@ -5,7 +5,7 @@ import math
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from .LiGT import LiGT
+from .HGT import HGT
 
 eps = 1e-9
 
@@ -53,7 +53,7 @@ class BundleGT(nn.Module):
 
         self.user_bundle_cf_count = self.ui_graph.sum(axis=1)
 
-        self.LiGT = LiGT(conf={
+        self.HGT = HGT(conf={
             "n_user": self.num_users,
             "n_item": self.num_items,
             "n_bundle": self.num_bundles,
@@ -82,10 +82,10 @@ class BundleGT(nn.Module):
         for k in ['lr', 'l2_reg', 'embedding_size', 'batch_size_train', 'batch_size_test', 'early_stopping']:
             self.MLConf[k] = self.conf[k]
         print("[ML Configuration]", self.MLConf)
-        print("[LiGT Configuration]", self.LiGT.conf)
+        print("[HGT Configuration]", self.HGT.conf)
 
     def propagate(self):
-        return self.LiGT()
+        return self.HGT()
 
     def forward(self, batch):
         losses = {}
@@ -102,7 +102,7 @@ class BundleGT(nn.Module):
         loss = torch.mean(torch.nn.functional.softplus(
             score[:, 1] - score[:, 0]))
 
-        l2_loss = self.embed_L2_norm * self.LiGT.reg_loss()
+        l2_loss = self.embed_L2_norm * self.HGT.reg_loss()
         loss = loss + l2_loss
         losses["l2"] = l2_loss.detach()
 
