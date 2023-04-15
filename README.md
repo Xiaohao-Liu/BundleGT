@@ -39,6 +39,13 @@ If you want to use our codes and datasets in your research, please cite:
 6. The experimental logs in txt-format are saved in ./log.
 7. The best model and associate config file for each experimental setting is saved in ./checkpoints.
 
+To facilitate understanding and implementation of our model code, we have divided it into four parts:
+
+1. [BundleGT.py](https://github.com/Xiaohao-Liu/BundleGT/blob/main/models/BundleGT/BundleGT.py), which contains the main Bundle Graph Transformer model,
+2. [LGCN.py](https://github.com/Xiaohao-Liu/BundleGT/blob/main/models/BundleGT/LGCN.py), which includes the LightGCN module,
+3. [LiT.py](https://github.com/Xiaohao-Liu/BundleGT/blob/main/models/BundleGT/LiT.py), which contains the Light self-attention module, and
+4. [HGT.py](https://github.com/Xiaohao-Liu/BundleGT/blob/main/models/BundleGT/HGT.py), which includes the Hierarchical Graph Transformer module.
+
 ## How to run the code
 1. Download and then decompress the dataset file into the current folder: 
 
