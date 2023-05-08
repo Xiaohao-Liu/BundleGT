@@ -11,7 +11,7 @@ eps = 1e-9
 
 class HGT(nn.Module):
     def __init__(self, conf, data):
-        super(HGT).__init__()
+        super().__init__()
         self.conf = {
             # basic
             "n_user": None,
