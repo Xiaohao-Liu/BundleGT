@@ -134,7 +134,6 @@ def main():
         "lr_", str(conf["lr"]), 
         "l2_", str(conf["l2_reg"]), 
         "emb_", str(conf["embedding_size"]),
-        "layers_",str(conf["num_layers"]),
         ]
 
     setting = "_".join(settings)
