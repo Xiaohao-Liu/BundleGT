@@ -53,7 +53,7 @@ To facilitate understanding and implementation of our model code, we have divide
  
    Here we utilize Youshu, NetEase, and iFashion as datasets, which have the same settings as [CrossCBR](https://github.com/mysbupt/CrossCBR). The dataset can be downloaded from the CrossCBR repository in the [dataset.tgz](https://github.com/mysbupt/CrossCBR/blob/master/dataset.tgz), and we recommend citing their paper (CrossCBR).
 
-2. Train CrossCBR on the dataset Youshu:
+2. Train BundleGT on the dataset Youshu:
 
     > python main.py -g 0 -m BundleGT -d Youshu --info="" --batch_size_test=2048 --batch_size_train=2048  --lr=1e-3 --l2_reg=1e-5 --num_ui_layer=4 --gcn_norm=0 --num_trans_layer=3 --num_token=70 --folder="train" --early_stopping=40 --ub_alpha=0.5 --bi_alpha=0.5
 
