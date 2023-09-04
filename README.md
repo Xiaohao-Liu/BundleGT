@@ -1,6 +1,6 @@
 
 # Strategy-aware Bundle Recommender System
-Yinwei Wei, Xiaohao Liu, Yunshan Ma, Xiang Wang, Liqiang Nie and Tat-Seng Chua
+Yinwei Wei, Xiaohao Liu, Yunshan Ma, Xiang Wang, Liqiang Nie and Tat-Seng Chua, [SIGIR'23](https://dl.acm.org/doi/10.1145/3539618.3591771)
 
 ![](model.png)
 
